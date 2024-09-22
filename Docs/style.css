@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap');
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+outline: none;
+font-family: "Recursive", sans-serif;
+scroll-behavior: smooth;
+}
+ 
+:root {
+--black-color: #1e1c1c;
+--white-color: #f7f7f7;
+}
+ 
+.bgImg{
+    height: 100vh;
+    width: 100%;
+    background: url(/Docs/Assets/hero.jpg) center;
+    background-size: cover;
+}
+
+.heroSection{
+    height: calc(85vh - 70px);
+}
