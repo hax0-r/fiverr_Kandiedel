@@ -4,34 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/Docs/Assets/Images/Global/favIcon.png" type="image/x-icon">
-    <title>Chup!</title>
+    <title>Kandiedei</title>
+    <link rel="shortcut icon" href="/Docs/Assets/man.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Docs/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 
 </head>
+
+<style>
+
+</style>
 
 <body>
 
     <div class="bgImg flex items-center justify-center p-5">
         <div class="max-w-[1440px] w-full bg-[#2e2e2e] text-[#ffffff] px-10 py-5 rounded-[4rem] min-h-[85vh] mx-auto">
 
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center z-10 justify-between h-16">
                 <a href="/index.html">
                     <h1 class="text-[24px] font-black tracking-wide">Kandiedei</h1>
                 </a>
 
-                <ul class="flex items-center gap-5">
+                <ul class="flex items-center gap-8 z-20">
                     <li><a href="" class="text-[24px] font-black text-[#c186f5] tracking-wide">Home</a></li>
-                    <li><a href="" class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">About</a></li>
-                    <li><a href="" class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Services</a></li>
-                    <li><a href="" class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Projects</a></li>
-                    <li><a href="" class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Contact</a></li>
+                    <li><a href=""
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
+                    </li>
+                    <li><a href=""
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
+                    </li>
+                    <li><a href=""
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
+                    </li>
+                    <li><a href=""
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Contact</a>
+                    </li>
                 </ul>
 
             </div>
@@ -40,18 +51,31 @@
 
                 <div class="max-w-[534px] w-full">
                     <h1 class="flex flex-col text-[32px] font-extrabold">
-                        <span>Hello, It's Me</span>
-                        <span class="text-[48px]"> Finn Triebel</span>
-                        <span> I am a Trainee <span class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">IT Specialist in</span></span>
-                        <span class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text"> Application Development</span>
+                        <span class="slidein [--slidein-delay:300ms] opacity-0 ">Hello, It's Me</span>
+                        <span class="text-[48px] slidein [--slidein-delay:500ms] opacity-0 "> Finn Triebel</span>
+                        <span class="slidein [--slidein-delay:700ms] opacity-0 "> I am a Trainee <span
+                                class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">IT
+                                Specialist in</span></span>
+                        <span class="slidein [--slidein-delay:900ms] opacity-0 ">
+                            <span id="typewriter"
+                                class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
+                                Application Development</span>
+                        </span>
                     </h1>
-                    <p class="text-[24px] font-extrabold pt-6">Always expanding my skills in backend and web technologies.</p>
-                    <button class="w-[214px] h-[68px] flex items-center justify-center mt-6 rounded-full bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] hover:bg-gradient-to-r hover:from-[#FF80AB] hover:to-[#BB86FC] transition-all duration-500 text-[20px] font-extrabold">Contact Me</button>
+                    <p class="text-[24px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">Always expanding my skills in backend and web
+                        technologies.</p>
+                    <a href="#"
+                        class="popup-button slidein [--slidein-delay:1300ms] opacity-0  text-[20px] font-extrabold w-[214px] h-[68px] flex items-center justify-center mt-6 rounded-full hover:scale-105 hover:shadow-xl">Contact
+                        Me</a>
                 </div>
 
-                <div class="max-w-[550px] w-full max-h-[576px]">
-                    <img src="/Docs/Assets/Image.png" class="w-full h-full" alt="">
+                <div class="max-w-[550px] w-full slidein [--slidein-delay:300ms] opacity-0  flex items-center justify-center max-h-[576px] relative">
+                    <img src="/Docs/Assets/man.png" class="w-full h-full z-10" alt="">
+                    <div
+                        class="shape bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] absolute w-[550px] h-[570px] rounded-[15rem] blur-xl  blob animation-delay-4000">
+                    </div>
                 </div>
+
 
 
             </div>
@@ -60,5 +84,49 @@
     </div>
 
 </body>
+
+
+<script>
+    const words = ["Application Development", "Web Development"];
+    let i = 0;
+    let j = 0;
+    let currentWord = "";
+    let isDeleting = false;
+    let delayAfterWord = false;
+
+    function type() {
+        currentWord = words[i];
+        const typewriter = document.getElementById("typewriter");
+
+        if (isDeleting) {
+            typewriter.textContent = currentWord.substring(0, j - 1);
+            j--;
+
+            if (j == 0) {
+                isDeleting = false;
+                i++;
+                if (i == words.length) {
+                    i = 0;
+                }
+                delayAfterWord = true; // Delay before starting the next word
+                setTimeout(type, 1000); // 1 second delay before typing the next word
+                return;
+            }
+        } else {
+            typewriter.textContent = currentWord.substring(0, j + 1);
+            j++;
+
+            if (j == currentWord.length) {
+                isDeleting = true;
+                delayAfterWord = true; // Delay after typing a full word
+                setTimeout(type, 5000); // 5 seconds delay before deleting the word
+                return;
+            }
+        }
+        setTimeout(type, 100); // Adjust typing speed here
+    }
+
+    type();
+</script>
 
 </html>
