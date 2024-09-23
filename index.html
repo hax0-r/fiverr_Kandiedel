@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kandiedei</title>
+    <title>Kandiedel</title>
     <link rel="shortcut icon" href="/Docs/Assets/man.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -24,9 +24,9 @@
     <div class="bgImg flex items-center justify-center p-5">
         <div class="max-w-[1440px] w-full bg-[#2e2e2e] text-[#ffffff] px-10 py-5 rounded-[4rem] min-h-[85vh] mx-auto">
 
-            <div class="flex items-center z-10 justify-between h-16">
+            <div class="flex items-center z-10 justify-between h-20 select-none max-w-7xl mx-auto px-6">
                 <a href="/index.html">
-                    <h1 class="text-[24px] font-black tracking-wide">Kandiedei</h1>
+                    <h1 class="text-[24px] font-black tracking-wide">Kandiedel</h1>
                 </a>
 
                 <ul class="flex items-center gap-8 z-20">
@@ -56,20 +56,27 @@
                         <span class="slidein [--slidein-delay:700ms] opacity-0 "> I am a Trainee <span
                                 class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">IT
                                 Specialist in</span></span>
-                        <span class="slidein [--slidein-delay:900ms] opacity-0 ">
+                        <span class="slidein select-none [--slidein-delay:900ms] opacity-0 ">
                             <span id="typewriter"
                                 class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
-                                Application Development</span>
+                                Application Development
+                            </span>
+                            <span id="cursor"
+                                class="cursor bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">|</span>
                         </span>
                     </h1>
-                    <p class="text-[24px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">Always expanding my skills in backend and web
+                    <p class="text-[24px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">Always
+                        expanding my skills in backend and web
                         technologies.</p>
-                    <a href="#"
-                        class="popup-button slidein [--slidein-delay:1300ms] opacity-0  text-[20px] font-extrabold w-[214px] h-[68px] flex items-center justify-center mt-6 rounded-full hover:scale-105 hover:shadow-xl">Contact
-                        Me</a>
+                    <div class="hover:scale-105 select-none transition-all duration-500">
+                        <a href="#"
+                            class="popup-button slidein [--slidein-delay:1300ms] opacity-0  text-[20px] font-extrabold w-[214px] h-[68px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Contact
+                            Me</a>
+                    </div>
                 </div>
 
-                <div class="max-w-[550px] w-full slidein [--slidein-delay:300ms] opacity-0  flex items-center justify-center max-h-[576px] relative">
+                <div
+                    class="max-w-[550px] select-none w-full slidein [--slidein-delay:300ms] opacity-0  flex items-center justify-center max-h-[576px] relative">
                     <img src="/Docs/Assets/man.png" class="w-full h-full z-10" alt="">
                     <div
                         class="shape bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] absolute w-[550px] h-[570px] rounded-[15rem] blur-xl  blob animation-delay-4000">
@@ -86,13 +93,13 @@
 </body>
 
 
+
 <script>
     const words = ["Application Development", "Web Development"];
     let i = 0;
     let j = 0;
     let currentWord = "";
     let isDeleting = false;
-    let delayAfterWord = false;
 
     function type() {
         currentWord = words[i];
@@ -108,8 +115,7 @@
                 if (i == words.length) {
                     i = 0;
                 }
-                delayAfterWord = true; // Delay before starting the next word
-                setTimeout(type, 1000); // 1 second delay before typing the next word
+                setTimeout(type, 1000); // Delay before starting the next word
                 return;
             }
         } else {
@@ -118,14 +124,14 @@
 
             if (j == currentWord.length) {
                 isDeleting = true;
-                delayAfterWord = true; // Delay after typing a full word
-                setTimeout(type, 5000); // 5 seconds delay before deleting the word
+                setTimeout(type, 5000); // Delay before deleting the word
                 return;
             }
         }
-        setTimeout(type, 100); // Adjust typing speed here
+        setTimeout(type, 100); // Adjust typing speed
     }
 
+    // Start typing animation
     type();
 </script>
 
