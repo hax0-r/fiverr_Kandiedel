@@ -106,17 +106,18 @@
             <div class="heroSection w-full flex items-center justify-center  pt-8 sm:px-5  lg:px-0 lg:pt-0">
 
 
-                <div class="flex lg:flex-row flex-col  lg:items-start items-center lg:justify-evenly justify-center w-full gap-5">
+                <div
+                    class="flex lg:flex-row flex-col  lg:items-start items-center lg:justify-evenly justify-center w-full gap-5">
 
                     <h1
-                            class="lg:hidden flex pb-6  w-full mx-auto flex-col md:text-[36px] text-3xl font-black text-center">
-                            <span class="slidein [--slidein-delay:300ms] opacity-0 "> My <span
-                                    class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
-                                    Services</span></span>
-                        </h1>
-                    
+                        class="lg:hidden flex pb-6  w-full mx-auto flex-col md:text-[36px] text-3xl font-black text-center">
+                        <span class="slidein [--slidein-delay:300ms] opacity-0 "> My <span
+                                class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
+                                Services</span></span>
+                    </h1>
+
                     <div
-                        class="max-w-[325px] w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                        class="max-w-[325px] hover:scale-110 duration-500 slidein [--slidein-delay:600ms] opacity-0 w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                         <h1
                             class="bg-gradient-to-r from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                             Software
@@ -141,7 +142,7 @@
                         </h1>
 
                         <div
-                            class=" w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                            class=" w-full hover:scale-110 duration-500  bg-[#1E1E1E] slidein [--slidein-delay:500ms] opacity-0 cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                             <h1
                                 class="bg-gradient-to-r from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                                 UI / UX
@@ -159,7 +160,7 @@
                     </div>
 
                     <div
-                        class="max-w-[325px] w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                        class="max-w-[325px] hover:scale-110 duration-500 slidein [--slidein-delay:600ms] opacity-0 w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                         <h1
                             class="bg-gradient-to-r  from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                             Web
@@ -196,6 +197,13 @@
     closeNav.addEventListener('click', () => {
         ResNavbar.style.width = "0rem"
     })
+    const about = document.querySelectorAll(".about");
+    setTimeout(() => {
+        about.forEach((element) => {
+            element.classList.remove('slidein', '[--slidein-delay:600ms]', 'opacity-0');
+        });
+    }, 1000);
+
 
     const lenis = new Lenis()
 
