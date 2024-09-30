@@ -12,7 +12,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/Docs/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <style>
@@ -21,15 +22,36 @@
 
 <body>
 
-    <div class="bgImg flex items-center justify-center p-5">
-        <div class="max-w-[1440px] w-full bg-[#2e2e2e] text-[#ffffff] px-10 py-5 rounded-[4rem] min-h-[85vh] mx-auto">
+    <div style="width: 0;" class="bg-[#2E2E2E] fixed top-0 left-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
+        id="ResNavbar">
+        <i class="absolute text-white top-8 right-8 fa-solid fa-x text-xl" id="closeNav"></i>
+        <ul class="flex items-center gap-8 text-white flex-col h-screen w-full  justify-center ">
+            <li><a href="" class="text-[24px] font-black text-[#c186f5] tracking-wide">Home</a></li>
+            <li><a href=""
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
+            </li>
+            <li><a href=""
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
+            </li>
+            <li><a href=""
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
+            </li>
+            <li><a href=""
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Contact</a>
+            </li>
+        </ul>
+    </div>
 
-            <div class="flex items-center z-10 justify-between h-20 select-none max-w-7xl mx-auto px-6">
+    <div class="bgImg flex items-center justify-center md:px-5 py-5 px-3">
+        <div
+            class="max-w-[1440px] w-full bg-[#2e2e2e] text-[#ffffff] mg:px-10 px-5 py-5 md:rounded-[4rem] rounded-3xl min-h-[85vh] mx-auto">
+
+            <div class="flex items-center z-10 justify-between md:h-20 h-16 select-none max-w-7xl mx-auto lg:px-6 ">
                 <a href="/index.html">
-                    <h1 class="text-[24px] font-black tracking-wide">Kandiedel</h1>
+                    <h1 class="md:text-[24px] text-[20px] font-black tracking-wide">Kandiedel</h1>
                 </a>
 
-                <ul class="flex items-center gap-8 z-20">
+                <ul class="lg:flex items-center gap-8 z-20 hidden">
                     <li><a href="" class="text-[24px] font-black text-[#c186f5] tracking-wide">Home</a></li>
                     <li><a href=""
                             class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
@@ -45,14 +67,18 @@
                     </li>
                 </ul>
 
+                <i id="openNav" class="fa-solid fa-bars lg:hidden text-xl -mt-2"> </i>
+
             </div>
 
-            <div class="heroSection w-full flex items-center justify-evenly">
+            <div
+                class="heroSection w-full flex lg:items-center lg:flex-row flex-col justify-evenly pt-8 sm:px-5  lg:px-0 gap-20 lg:gap-0 lg:pt-0">
 
                 <div class="max-w-[534px] w-full">
-                    <h1 class="flex flex-col text-[32px] font-extrabold">
+                    <h1 class="flex flex-col md:text-[32px] text-[22px] font-extrabold">
                         <span class="slidein [--slidein-delay:300ms] opacity-0 ">Hello, It's Me</span>
-                        <span class="text-[48px] slidein [--slidein-delay:500ms] opacity-0 "> Finn Triebel</span>
+                        <span class="md:text-[48px] text-[35px] slidein [--slidein-delay:500ms] opacity-0 "> Finn
+                            Triebel</span>
                         <span class="slidein [--slidein-delay:700ms] opacity-0 "> I am a Trainee <span
                                 class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">IT
                                 Specialist in</span></span>
@@ -65,21 +91,23 @@
                                 class="cursor bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">|</span>
                         </span>
                     </h1>
-                    <p class="text-[24px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">Always
+                    <p
+                        class="md:text-[24px] text-[20px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">
+                        Always
                         expanding my skills in backend and web
                         technologies.</p>
                     <div class="hover:scale-105 select-none transition-all duration-500">
                         <a href="#"
-                            class="popup-button slidein [--slidein-delay:1300ms] opacity-0  text-[20px] font-extrabold w-[214px] h-[68px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Contact
+                            class="popup-button slidein [--slidein-delay:1300ms] opacity-0  md:text-[20px] text-[18px] font-extrabold md:w-[214px] w-[180px] md:h-[68px] h-[50px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Contact
                             Me</a>
                     </div>
                 </div>
 
                 <div
-                    class="max-w-[550px] select-none w-full slidein [--slidein-delay:300ms] opacity-0  flex items-center justify-center max-h-[576px] relative">
+                    class="max-w-[550px] select-none lg:mx-0 mx-auto   w-full slidein [--slidein-delay:300ms] opacity-0  flex items-center justify-center  relative">
                     <img src="/Docs/Assets/man.png" class="w-full h-full z-10" alt="">
                     <div
-                        class="shape bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] absolute w-[550px] h-[570px] rounded-[15rem] blur-xl  blob animation-delay-4000">
+                        class="shape bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] absolute w-full max-w-[550px] max-h-[470px] h-full rounded-[15rem] blur-xl  blob animation-delay-4000">
                     </div>
                 </div>
 
@@ -93,8 +121,28 @@
 </body>
 
 
-
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
+
+    const ResNavbar = document.getElementById("ResNavbar")
+    const closeNav = document.getElementById("closeNav")
+    const openNav = document.getElementById("openNav")
+
+    openNav.addEventListener('click', () => {
+        ResNavbar.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        ResNavbar.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
     const words = ["Application Development", "Web Development"];
     let i = 0;
     let j = 0;
