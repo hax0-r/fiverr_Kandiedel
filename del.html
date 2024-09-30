@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kandiedel | Project</title>
+    <title>Kandiedel | Services</title>
     <link rel="shortcut icon" href="/Docs/Assets/man.png" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -19,150 +19,30 @@
 </head>
 
 <style>
-    .fadeIn {
-        animation: fadeIn 2s;
-    }
-
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
-    #about {
-        background: url(/Docs/Assets/DiscordProject.png) center;
-        background-size: cover;
-    }
-
-    @media screen and (min-width:769px) {
-        #about:hover {
-            background: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.659)), url(/Docs/Assets/DiscordProject.png) center;
-            background-size: cover;
-        }
-    }
-
-    @media screen and (max-width:769px) {
-        #about {
-            background: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.659)), url(/Docs/Assets/DiscordProject.png) center;
-            background-size: cover;
+    .about:hover {
+        h1 {
+            color: white;
         }
     }
 
     .about {
         position: relative;
         overflow: hidden;
-        background: url(/Docs/Assets/Background.png) center;
-        background-size: cover;
+    }
+
+    .about::before {
         transition: 0.4s all;
-
-        h1,
-        p,
-        div {
-            z-index: -10;
-            opacity: 0;
-            
-        }
-    }
-    
-    .about:hover {
-        h1 {
-            color: white;
-        }
-        
-        h1,
-        p,
-        div {
-
-            opacity: 1;
-            z-index: 10;
-        }
-    }
-    
-    @media screen and (max-width:769px) {
-        .about {
-            h1 {
-                color: white;
-            }
-    
-            h1,
-            p,
-            div {
-                z-index: 10;
-            }
-        }
-    }
-    
-    @media screen and (max-width:769px) {
-        #about {
-            h1 {
-                color: white;
-            }
-    
-            h1,
-            p,
-            div {
-                z-index: 10;
-            }
-        }
+        content: "";
+        left: 0;
+        background: linear-gradient(to bottom left, #FF80AB, #BB86FC);
+        width: 0%;
+        height: 100%;
+        position: absolute;
     }
 
     .about:hover::before {
-        animation: fadeIn 1s;
-        transition: 0.4s all;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content: "";
-        background: linear-gradient(to bottom, #ff80aaba, #bb86fcaf);
-        width: 0%;
-        height: 0%;
-        position: absolute;
-        border-radius: 100%;
-        border-radius: 0%;
         height: 100%;
         width: 100%;
-    }
-    @media screen and (max-width:769px) {
-    .about::before {
-        animation: fadeIn .4s;
-        transition: 0.4s all;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content: "";
-        background: linear-gradient(to bottom, #ff80aaba, #bb86fcaf);
-        width: 0%;
-        height: 0%;
-        position: absolute;
-        border-radius: 100%;
-        border-radius: 0%;
-        height: 100%;
-        width: 100%;
-    }
-
-    }
-
-    @media screen and (max-width:769px) {
-        #about::before {
-            animation: fadeIn .4s;
-            transition: 0.4s all;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            content: "";
-            background: linear-gradient(to bottom, #ff80aaba, #bb86fcaf);
-            width: 0%;
-            height: 0%;
-            position: absolute;
-            border-radius: 100%;
-            border-radius: 0%;
-            height: 100%;
-            width: 100%;
-        }
     }
 </style>
 
@@ -179,10 +59,10 @@
             <li><a href="/about.html"
                     class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
             </li>
-            <li><a href="/services.html"
-                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
+            <li><a href="/services.html" class="text-[24px] font-black text-[#c186f5] tracking-wide">Services</a></li>
+            <li><a href="/project.html"
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
             </li>
-            <li><a href="/project.html" class="text-[24px] font-black text-[#c186f5] tracking-wide">Projects</a></li>
             <li><a href="/contact.html"
                     class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Contact</a>
             </li>
@@ -206,9 +86,9 @@
                             class="text-[24px] font-black tran  sition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
                     </li>
                     <li><a href="/services.html"
-                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
-                    </li>
-                    <li><a href="/project.html" class="text-[24px] font-black text-[#c186f5] tracking-wide">Projects</a>
+                            class="text-[24px] font-black text-[#c186f5] tracking-wide">Services</a></li>
+                    <li><a href="/project.html"
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
                     </li>
                     <li><a href="/contact.html"
                             class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Contact</a>
@@ -219,21 +99,21 @@
 
             </div>
 
-            <div class="heroSection  w-full flex items-center justify-center  pt-8 sm:px-5  lg:px-0 lg:pt-0">
+            <div class="heroSection w-full flex items-center justify-center  pt-8 sm:px-5  lg:px-0 lg:pt-0">
 
 
                 <div
-                    class="flex lg:flex-row flex-col   lg:items-start items-center lg:justify-evenly justify-center w-full gap-5">
+                    class="flex lg:flex-row flex-col  lg:items-start items-center lg:justify-evenly justify-center w-full gap-5">
 
                     <h1
                         class="lg:hidden flex pb-6  w-full mx-auto flex-col md:text-[36px] text-3xl font-black text-center">
                         <span class="slidein [--slidein-delay:300ms] opacity-0 "> My <span
                                 class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
-                                Projects</span></span>
+                                Services</span></span>
                     </h1>
 
                     <div
-                        class="max-w-[325px] w-full hover:scale-110 duration-500 bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                        class="max-w-[325px] hover:scale-110 duration-500 slidein [--slidein-delay:600ms] opacity-0 w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                         <h1
                             class="bg-gradient-to-r from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                             Software
@@ -245,7 +125,7 @@
                             growth</p>
 
                         <div class="mt-20 z-10">
-                            <a href="/del.html" class="text-white text-[14px] underline font-extrabold">Read More</a>
+                            <a href="" class="text-white text-[14px] underline font-extrabold">Read More</a>
                         </div>
                     </div>
 
@@ -254,11 +134,11 @@
                             class="lg:flex hidden pb-14 pt-5 max-w-[179px]  w-full mx-auto flex-col md:text-[36px] text-[25px] font-black text-center">
                             <span class="slidein [--slidein-delay:300ms] opacity-0 "> My <span
                                     class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
-                                    Projects</span></span>
+                                    Services</span></span>
                         </h1>
 
-                        <div id="about"
-                            class=" w-full hover:scale-110 duration-500 bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                        <div
+                            class=" w-full hover:scale-110 duration-500  bg-[#1E1E1E] slidein [--slidein-delay:500ms] opacity-0 cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                             <h1
                                 class="bg-gradient-to-r from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                                 UI / UX
@@ -276,7 +156,7 @@
                     </div>
 
                     <div
-                        class="max-w-[325px] hover:scale-110 duration-500 w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
+                        class="max-w-[325px] hover:scale-110 duration-500 slidein [--slidein-delay:600ms] opacity-0 w-full bg-[#1E1E1E] cursor-pointer transition-all flex items-center justify-center flex-col text-center  px-10 py-6 rounded-[2.5rem] about">
                         <h1
                             class="bg-gradient-to-r  from-[#BB86FC] text-center leading-tight to-[#FF80AB] inline-block pt-5 text-transparent bg-clip-text max-w-[137px] w-full md:text-[20px] text-[18px] font-black z-10">
                             Web
@@ -313,6 +193,13 @@
     closeNav.addEventListener('click', () => {
         ResNavbar.style.width = "0rem"
     })
+    const about = document.querySelectorAll(".about");
+    setTimeout(() => {
+        about.forEach((element) => {
+            element.classList.remove('slidein', '[--slidein-delay:600ms]', 'opacity-0');
+        });
+    }, 1000);
+
 
     const lenis = new Lenis()
 
