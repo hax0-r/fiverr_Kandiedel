@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandiedel</title>
+    <link rel="shortcut icon" href="/Docs/Assets/man.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/Docs/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <div style="width: 0;"
+        class="bg-[#2E2E2E] fixed top-0 left-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
+        id="ResNavbar">
+        <i class="absolute text-white top-8 right-8 fa-solid fa-x text-xl" id="closeNav"></i>
+        <ul class="flex items-center gap-8 text-white flex-col h-screen w-full  justify-center ">
+            <li><a href="/index.html"
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Home</a>
+            </li>
+            <li><a href="/about.html"
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
+            </li>
+            <li><a href="/services.html"
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
+            </li>
+            <li><a href="/project.html"
+                    class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
+            </li>
+            <li><a href="/contact.html" class="text-[24px] font-black text-[#c186f5] tracking-wide">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="bgImg flex items-center justify-center md:px-5 py-5 px-3">
+        <div
+            class="max-w-[1440px] w-full bg-[#2e2e2e] text-[#ffffff] mg:px-10 px-5 py-5 md:rounded-[4rem] rounded-3xl min-h-[85vh] mx-auto">
+
+            <div class="flex items-center z-10 justify-between md:h-20 h-16 select-none max-w-7xl mx-auto lg:px-6 ">
+                <a href="/index.html">
+                    <h1 class="md:text-[24px] text-[20px] font-black tracking-wide">Kandiedel</h1>
+                </a>
+
+                <ul class="lg:flex items-center gap-8 z-20 hidden">
+                    <li><a href="/index.html"
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Home</a>
+                    </li>
+                    <li><a href="/about.html"
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">About</a>
+                    </li>
+                    <li><a href="/services.html"
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Services</a>
+                    </li>
+                    <li><a href="/project.html"
+                            class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-[0.4s] tracking-wide">Projects</a>
+                    </li>
+                    <li><a href="/contact.html" class="text-[24px] font-black text-[#c186f5] tracking-wide">Contact</a>
+                    </li>
+                </ul>
+
+                <i id="openNav" class="fa-solid fa-bars lg:hidden text-xl -mt-2"> </i>
+
+            </div>
+
+            <div
+                class="heroSection w-full flex items-center justify-center pt-8 sm:px-5  lg:px-0 lg:gap-0 lg:pt-0">
+
+                <div class="flex  lg:flex-row flex-col justify-evenly gap-16 ">
+                    <div class="max-w-[534px] w-full md:mt-10">
+                        <h1 class="flex flex-col md:text-[32px] text-[22px] font-extrabold">
+                            <span class="slidein [--slidein-delay:300ms] opacity-0 ">Here is the </span>
+                            <span
+                                class="md:text-[48px] text-[35px] slidein [--slidein-delay:500ms] opacity-0 bg-gradient-to-r from-[#BB86FC] via-[#FF80AB] to-[#FF80AB] inline-block text-transparent bg-clip-text ">
+                                Contact Form</span>
+                            <span class="slidein [--slidein-delay:700ms] opacity-0 md:text-[24px] text-[20px]">if you want
+                                to reach out to me for any reason. </span>
+                            <span class="slidein [--slidein-delay:800ms] opacity-0 pt-4 md:text-[24px] text-[20px]">Fill out
+                                the form on the right, and I'll get back to you as soon as possible! </span>
+                        </h1>
+                    </div>
+    
+                    <form action="" class="slidein [--slidein-delay:300ms] opacity-0 ">
+                        <div
+                            class="max-w-[540px] lg:mx-0 mx-auto   w-full flex-col  flex items-center justify-center  relative">
+        
+                            <div class="flex w-full items-center md:w-auto justify-center md:gap-4 gap-5 md:flex-row flex-col">
+                                <div class="relative flex md:w-auto w-full items-center justify-center transition-all " id="changePosition">
+                                    <p id="changePara"
+                                        class="absolute transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        Name</p>
+                                    <input type="text"
+                                        class="bg-[#1E1E1E] text-white md:w-auto w-full font-bold py-6 text-center px-6 rounded-3xl ">
+                                </div>
+                                <div class="relative flex items-center justify-center transition-all md:w-auto w-full " id="changePosition2">
+                                    <p id="changePara2"
+                                        class="absolute transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        Email</p>
+                                    <input type="email"
+                                        class="bg-[#1E1E1E] md:w-auto w-full text-white font-bold py-6 text-center px-6 rounded-3xl ">
+                                </div>
+                            </div>
+        
+                            <div class="relative flex items-center mt-7 justify-center transition-all w-full "
+                                id="changePosition3">
+                                <p id="changePara3"
+                                    class="absolute transition-all top-24 md:left-60   bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                    Email</p>
+                                <textarea type="email" rows="8"
+                                    class="bg-[#1E1E1E] resize-none text-white font-bold py-6 text-center px-6 w-full rounded-3xl "></textarea>
+                            </div>
+        
+                            <div class="hover:scale-105 select-none transition-all duration-500">
+                                <a href="#"
+                                    class="popup-button md:text-[20px] text-[18px] font-extrabold md:w-[214px] w-[180px] md:h-[68px] h-[50px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Send</a>
+                            </div>
+        
+                        </div>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+
+    const changePosition = document.getElementById("changePosition")
+    const changePara = document.getElementById("changePara")
+    const changePosition2 = document.getElementById("changePosition2")
+    const changePara2 = document.getElementById("changePara2")
+    const changePosition3 = document.getElementById("changePosition3")
+    const changePara3 = document.getElementById("changePara3")
+
+    changePosition.addEventListener('click', () => {
+        changePara.style.top = "-1.2rem"
+        changePara.style.left = "1.2rem"
+    })
+    changePosition2.addEventListener('click', () => {
+        changePara2.style.top = "-1.2rem"
+        changePara2.style.left = "1.2rem"
+    })
+    changePosition3.addEventListener('click', () => {
+        changePara3.style.top = "-1.2rem"
+        changePara3.style.left = "1.2rem"
+    })
+
+
+
+
+
+
+
+    const ResNavbar = document.getElementById("ResNavbar")
+    const closeNav = document.getElementById("closeNav")
+    const openNav = document.getElementById("openNav")
+
+    openNav.addEventListener('click', () => {
+        ResNavbar.style.width = "100%"
+    })
+    closeNav.addEventListener('click', () => {
+        ResNavbar.style.width = "0rem"
+    })
+
+    const lenis = new Lenis()
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+</script>
+
+</html>
