@@ -21,6 +21,7 @@
 </style>
 
 <body>
+    <div id="opacityShow" style="width: 0;" class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 left-0 z-20 bg-[#00000081]"></div>
 
     <div style="width: 0;" class="bg-[#2E2E2E] fixed top-0 left-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
         id="ResNavbar">
@@ -76,7 +77,7 @@
                 class="heroSection w-full flex lg:items-center lg:flex-row flex-col-reverse justify-evenly pt-8 sm:px-5  lg:px-0 gap-16 lg:gap-0 lg:pt-0">
 
                 <div class="max-w-[534px] w-full">
-                    <h1 class="flex flex-col md:text-[32px] text-[22px] font-extrabold">
+                    <h1 class="flex flex-col md:text-[32px] text-[22px] md:text-start text-center font-extrabold">
                         <span class="slidein [--slidein-delay:300ms] opacity-0 ">Hello, It's Me</span>
                         <span class="md:text-[48px] text-[35px] slidein [--slidein-delay:500ms] opacity-0 "> Finn
                             Triebel</span>
@@ -93,11 +94,11 @@
                         </span>
                     </h1>
                     <p
-                        class="md:text-[24px] text-[20px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">
+                        class="md:text-[24px] md:text-start text-center text-[20px] font-extrabold pt-6 slidein [--slidein-delay:1100ms] opacity-0 ">
                         Always
                         expanding my skills in backend and web
                         technologies.</p>
-                    <div class="hover:scale-105 inline-flex items-start justify-start select-none transition-all duration-500">
+                    <div class="hover:scale-105 md:inline-flex flex md:items-start items-center justify-center md:justify-start select-none transition-all duration-500">
                         <a href="#"
                             class="popup-button slidein [--slidein-delay:1300ms] opacity-0  md:text-[20px] text-[18px] font-extrabold md:w-[214px] w-[180px] md:h-[68px] h-[50px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Contact
                             Me</a>
@@ -125,14 +126,21 @@
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 
-    const ResNavbar = document.getElementById("ResNavbar")
+const ResNavbar = document.getElementById("ResNavbar")
     const closeNav = document.getElementById("closeNav")
     const openNav = document.getElementById("openNav")
+    const opacityShow = document.getElementById("opacityShow")
 
     openNav.addEventListener('click', () => {
-        ResNavbar.style.width = "100%"
+        ResNavbar.style.width = "20rem"
+        opacityShow.style.width = "100%"
     })
     closeNav.addEventListener('click', () => {
+        opacityShow.style.width = "0"
+        ResNavbar.style.width = "0rem"
+    })
+    opacityShow.addEventListener('click', () => {
+        opacityShow.style.width = "0"
         ResNavbar.style.width = "0rem"
     })
 

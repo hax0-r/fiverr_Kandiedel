@@ -23,7 +23,7 @@
 </style>
 
 <body>
-
+    <div id="opacityShow" style="width: 0;" class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 left-0 z-20 bg-[#00000081]"></div>
     <div style="width: 0;"
         class="bg-[#2E2E2E] fixed top-0 left-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
         id="ResNavbar">
@@ -41,7 +41,7 @@
             <li><a href="/project.html"
                     class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Projects</a>
             </li>
-            <li><a href="/contact.html" class="text-[24px] font-black ">Contact</a>
+            <li><a href="/contact.html" class="text-[24px] font-black bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text tracking-wide">Contact</a>
             </li>
         </ul>
     </div>
@@ -80,7 +80,7 @@
 
                 <div class="flex  lg:flex-row flex-col justify-evenly md:gap-16 gap-10 ">
                     <div class="max-w-[534px] w-full md:mt-10">
-                        <h1 class="flex flex-col md:text-[32px] text-[22px] font-extrabold">
+                        <h1 class="flex flex-col md:text-[32px] text-[22px] font-extrabold md:text-start text-center">
                             <span class="slidein [--slidein-delay:300ms] opacity-0 ">Here is the </span>
                             <span
                                 class="md:text-[48px] text-[35px] slidein [--slidein-delay:500ms] opacity-0 bg-gradient-to-r from-[#BB86FC] via-[#FF80AB] to-[#FF80AB] inline-block text-transparent bg-clip-text ">
@@ -256,11 +256,18 @@
     const ResNavbar = document.getElementById("ResNavbar")
     const closeNav = document.getElementById("closeNav")
     const openNav = document.getElementById("openNav")
+    const opacityShow = document.getElementById("opacityShow")
 
     openNav.addEventListener('click', () => {
-        ResNavbar.style.width = "100%"
+        ResNavbar.style.width = "20rem"
+        opacityShow.style.width = "100%"
     })
     closeNav.addEventListener('click', () => {
+        opacityShow.style.width = "0"
+        ResNavbar.style.width = "0rem"
+    })
+    opacityShow.addEventListener('click', () => {
+        opacityShow.style.width = "0"
         ResNavbar.style.width = "0rem"
     })
 

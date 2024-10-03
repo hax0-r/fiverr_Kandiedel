@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+    <div id="opacityShow" style="width: 0;" class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 left-0 z-20 bg-[#00000081]"></div>
     <div style="width: 0;"
         class="bg-[#2E2E2E] fixed top-0 left-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
         id="ResNavbar">
@@ -117,14 +117,21 @@
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 
-    const ResNavbar = document.getElementById("ResNavbar")
+const ResNavbar = document.getElementById("ResNavbar")
     const closeNav = document.getElementById("closeNav")
     const openNav = document.getElementById("openNav")
+    const opacityShow = document.getElementById("opacityShow")
 
     openNav.addEventListener('click', () => {
-        ResNavbar.style.width = "100%"
+        ResNavbar.style.width = "20rem"
+        opacityShow.style.width = "100%"
     })
     closeNav.addEventListener('click', () => {
+        opacityShow.style.width = "0"
+        ResNavbar.style.width = "0rem"
+    })
+    opacityShow.addEventListener('click', () => {
+        opacityShow.style.width = "0"
         ResNavbar.style.width = "0rem"
     })
 

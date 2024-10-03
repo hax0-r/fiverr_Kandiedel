@@ -131,7 +131,7 @@
 }
 
 .linkGradientHover {
-    transition: 200ms all;
+    transition: 400ms all;
 }
 
 .linkGradientHover:hover {
