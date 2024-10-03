@@ -102,33 +102,33 @@
                                 class="flex w-full items-center md:w-auto justify-center md:gap-4 gap-5 md:flex-row flex-col">
                                 <div class="relative flex md:w-auto w-full items-center justify-center transition-all "
                                     id="changePosition">
-                                    <p id="changePara"
-                                        class="absolute transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
-                                        Name</p>
-                                    <input type="text"
+                                    <label for="nanme" id="changePara"
+                                        class="absolute cursor-text transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        Name</label>
+                                    <input type="text" id="nanme"
                                         class="bg-[#1E1E1E] text-white md:w-auto w-full font-bold py-6 text-center px-6 rounded-3xl ">
                                 </div>
-                                <div class="relative flex items-center justify-center transition-all md:w-auto w-full "
+                                <div class="relative  flex items-center justify-center transition-all md:w-auto w-full "
                                     id="changePosition2">
-                                    <p id="changePara2"
-                                        class="absolute transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
-                                        Email</p>
-                                    <input type="email"
+                                    <label for="email" id="changePara2"
+                                        class="absolute cursor-text transition-all md:top-4 t0p-5 md:left-24  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        Email</label>
+                                    <input type="email" id="email"
                                         class="bg-[#1E1E1E] md:w-auto w-full text-white font-bold py-6 text-center px-6 rounded-3xl ">
                                 </div>
                             </div>
 
                             <div class="relative flex items-center mt-7 justify-center transition-all w-full "
                                 id="changePosition3">
-                                <p id="changePara3"
-                                    class="absolute transition-all top-24 md:left-[13.6rem]   bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
-                                    Message</p>
-                                <textarea rows="8"
+                                <label id="changePara3" for="textArea"
+                                    class="absolute cursor-text transition-all top-24 md:left-[13.6rem]   bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                    Message</label>
+                                <textarea rows="8" id="textArea"
                                     class="bg-[#1E1E1E] resize-none text-white font-bold py-6 text-center px-6 w-full rounded-3xl "></textarea>
                             </div>
 
                             <div class="hover:scale-105 select-none transition-all duration-500">
-                                    <button type="submit"
+                                <button type="submit"
                                     class="popup-button md:text-[20px] text-[18px] font-extrabold md:w-[214px] w-[180px] md:h-[68px] h-[50px] flex items-center justify-center mt-6 rounded-full  hover:shadow-xl">Send</button>
                             </div>
 
@@ -160,33 +160,66 @@
     const inputEmail = changePosition2.querySelector('input');
     const inputMessage = changePosition3.querySelector('textarea');
 
+    let isFirstFocus = true;
+
     inputName.addEventListener('focus', () => {
         changePara.style.top = "-1.2rem";
-        changePara.style.left = "1.2rem";
+
+        if (isFirstFocus) {
+            // Apply for the first focus
+            changePara.style.left = "1.2rem";
+            isFirstFocus = false;  // After the first focus, switch the flag
+        } else {
+            // Apply for subsequent focuses
+            changePara.style.left = "3rem";
+        }
     });
     inputName.addEventListener('blur', () => {
         if (inputName.value === "") {
-            changePara.style.top = "1.2rem";
+            changePara.style.top = "1.1rem";
             changePara.style.left = "50%";
             changePara.style.transform = "translateX(-50%)";  // center it again
         }
     });
 
+    
+    let isSecondFocus = true;
+
     inputEmail.addEventListener('focus', () => {
         changePara2.style.top = "-1.2rem";
-        changePara2.style.left = "1.2rem";
+
+        if (isSecondFocus) {
+            // Apply for the first focus
+            changePara2.style.left = "1.2rem";
+            isSecondFocus = false;  // After the first focus, switch the flag
+        } else {
+            // Apply for subsequent focuses
+            changePara2.style.left = "3rem";
+        }
     });
     inputEmail.addEventListener('blur', () => {
         if (inputEmail.value === "") {
-            changePara2.style.top = "1.2rem";
+            changePara2.style.top = "1.1rem";
             changePara2.style.left = "50%";
             changePara2.style.transform = "translateX(-50%)";  // center it again
         }
     });
 
+    
+    
+    let isThirdFocus = true;
+
     inputMessage.addEventListener('focus', () => {
         changePara3.style.top = "-1.2rem";
-        changePara3.style.left = "1.2rem";
+
+        if (isThirdFocus) {
+            // Apply for the first focus
+            changePara3.style.left = "1.2rem";
+            isThirdFocus = false;  // After the first focus, switch the flag
+        } else {
+            // Apply for subsequent focuses
+            changePara3.style.left = "4rem";
+        }
     });
     inputMessage.addEventListener('blur', () => {
         if (inputMessage.value === "") {
@@ -197,33 +230,17 @@
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     const links = document.querySelectorAll('.linkHover');
 
     links.forEach(link => {
         let hoverTimeout;
 
-        // Add hover event listeners
         link.addEventListener('mouseenter', () => {
-            // Set timeout to apply class after 1 second (1000 ms)
             hoverTimeout = setTimeout(() => {
                 link.classList.add('linkGradientHover');
             }, 200);
         });
 
-        // On mouse leave, clear timeout and remove the linkGradientHover class
         link.addEventListener('mouseleave', () => {
             clearTimeout(hoverTimeout);
             link.classList.remove('linkGradientHover');
