@@ -24,11 +24,11 @@
 
 <body>
 
-    <section id="showNotic"  class="fixed hidden opacity-0 duration-500 fadeIn max-w-sm p-4 mx-auto z-30  glass right-12  bottom-16">
+    <section id="showNotic"  style="opacity: 0;display: none;"
+        class="fixed   duration-500 fadeIn md:max-w-[19rem] md:rounded-xl  p-4 mx-auto z-30  glass md:right-12   md:bottom-16 w-full ">
         <h2 class="font-semibold text-white ">KandiedeL Notice</h2>
 
         <p class="mt-4 text-sm text-white ">Currently unavailable at the moment</p>
-
     </section>
     <div id="opacityShow" style="width: 0;"
         class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 right-0 z-20 bg-[#00000081]">
@@ -169,9 +169,16 @@
     const showNotic = document.getElementById("showNotic")
     const downloadCv = document.getElementById("downloadCv")
     downloadCv.addEventListener('click', () => {
-        showNotic.classList.remove('hidden', 'opacity-0');
+        showNotic.style.opacity = "100%"
+        showNotic.style.display = "block"
+        
+        setTimeout(()=>{
+            showNotic.style.opacity = "0%"
+        },3000)
+        setTimeout(()=>{
+            showNotic.style.display = "none"
+        },4000)
     });
-
 
     const changePosition = document.getElementById("changePosition");
     const changePara = document.getElementById("changePara");
