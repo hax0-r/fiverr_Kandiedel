@@ -135,14 +135,14 @@
 
     const showNotic = document.getElementById("showNotic")
     const downloadCv = document.getElementById("downloadCv")
+    downloadCv.addEventListener('click', () => {
+        showNotic.classList.remove('hidden', 'opacity-0');
+    });
     const ResNavbar = document.getElementById("ResNavbar")
     const closeNav = document.getElementById("closeNav")
     const openNav = document.getElementById("openNav")
     const opacityShow = document.getElementById("opacityShow")
 
-    downloadCv.addEventListener('click', () => {
-        showNotic.classList.remove('hidden', 'opacity-0');
-    });
 
 
     openNav.addEventListener('click', () => {
