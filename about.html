@@ -19,7 +19,19 @@
 </head>
 
 <body>
-    <div id="opacityShow" style="width: 0;" class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 right-0 z-20 bg-[#00000081]"></div>
+
+    <section id="showNotic"  class="fixed hidden opacity-0 duration-500 fadeIn max-w-sm p-4 mx-auto z-30  glass right-12  bottom-16">
+        <h2 class="font-semibold text-white ">KandiedeL Notice</h2>
+
+        <p class="mt-4 text-sm text-white ">Not avaiable yet, it will uploaded  soon</p>
+
+    </section>
+
+
+
+    <div id="opacityShow" style="width: 0;"
+        class="overflow-hidden transition-all duration-[300ms] fadeIn h-screen fixed top-0 right-0 z-20 bg-[#00000081]">
+    </div>
     <div style="width: 0;"
         class="bg-[#2E2E2E] fixed top-0 right-0 h-screen lg:hidden z-50 duration-500 transition-all overflow-hidden"
         id="ResNavbar">
@@ -28,7 +40,9 @@
             <li><a href="/index.html"
                     class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Home</a>
             </li>
-            <li><a href="/about.html" class="text-[24px] font-black bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text tracking-wide">About</a></li>
+            <li><a href="/about.html"
+                    class="text-[24px] font-black bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text tracking-wide">About</a>
+            </li>
             <li><a href="/services.html"
                     class="text-[24px] font-black transition-all hover:text-[#c186f5] duration-500 tracking-wide">Services</a>
             </li>
@@ -57,10 +71,10 @@
                     <li><a href="/about.html" class="text-[24px] font-black linkGradient">About</a>
                     </li>
                     <li><a href="/services.html"
-                        class="text-[24px] font-black transition-all linkHover hover:text-[#c186f5] duration-500 tracking-wide">Services</a>
+                            class="text-[24px] font-black transition-all linkHover hover:text-[#c186f5] duration-500 tracking-wide">Services</a>
                     </li>
                     <li><a href="/project.html"
-                        class="text-[24px] font-black transition-all linkHover hover:text-[#c186f5] duration-500 tracking-wide">Projects</a>
+                            class="text-[24px] font-black transition-all linkHover hover:text-[#c186f5] duration-500 tracking-wide">Projects</a>
                     </li>
                     <li><a href="/contact.html"
                             class="text-[24px] font-black transition-all linkHover hover:text-[#c186f5] duration-500 tracking-wide">Contact</a>
@@ -86,7 +100,8 @@
                 <div class="max-w-[534px] w-full text-center">
                     <h1 class="flex flex-col md:text-[36px] text-[25px] font-extrabold">
                         <span class="slidein [--slidein-delay:300ms] opacity-0 "> About <span
-                                class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text"> Me</span></span>
+                                class="bg-gradient-to-r from-[#BB86FC] to-[#FF80AB] inline-block text-transparent bg-clip-text">
+                                Me</span></span>
                     </h1>
                     <p
                         class="md:text-[20px] text-[16px] font-extrabold pt-7 slidein [--slidein-delay:500ms] opacity-0 ">
@@ -95,7 +110,8 @@
                         experience in Java, PHP, and NodeJS. As a lifelong gamer, I’m always up for new challenges. In
                         my free time, I recharge by going for walks. I’m eager to continue growing and working on
                         exciting projects. Let’s connect if you’re interested in collaborating!</p>
-                    <div class="inline-flex items-center justify-center hover:scale-105 select-none transition-all duration-500 mt-7">
+                    <div id="downloadCv"
+                        class="inline-flex items-center justify-center hover:scale-105 select-none transition-all duration-500 mt-7">
                         <a href="#"
                             class="popup-button slidein mx-auto [--slidein-delay:700ms] opacity-0  md:text-[20px] text-[18px] font-extrabold md:w-[214px] w-[180px] md:h-[68px] h-[50px] flex items-center justify-center  rounded-full  hover:shadow-xl">Download
                             CV</a>
@@ -117,10 +133,17 @@
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script>
 
-const ResNavbar = document.getElementById("ResNavbar")
+    const showNotic = document.getElementById("showNotic")
+    const downloadCv = document.getElementById("downloadCv")
+    const ResNavbar = document.getElementById("ResNavbar")
     const closeNav = document.getElementById("closeNav")
     const openNav = document.getElementById("openNav")
     const opacityShow = document.getElementById("opacityShow")
+
+    downloadCv.addEventListener('click', () => {
+        showNotic.classList.remove('hidden', 'opacity-0');
+    });
+
 
     openNav.addEventListener('click', () => {
         ResNavbar.style.width = "20rem"
@@ -146,23 +169,23 @@ const ResNavbar = document.getElementById("ResNavbar")
 
     const links = document.querySelectorAll('.linkHover');
 
-links.forEach(link => {
-    let hoverTimeout;
+    links.forEach(link => {
+        let hoverTimeout;
 
-    // Add hover event listeners
-    link.addEventListener('mouseenter', () => {
-        // Set timeout to apply class after 1 second (1000 ms)
-        hoverTimeout = setTimeout(() => {
-            link.classList.add('linkGradientHover');
-        }, 200);
-    });
+        // Add hover event listeners
+        link.addEventListener('mouseenter', () => {
+            // Set timeout to apply class after 1 second (1000 ms)
+            hoverTimeout = setTimeout(() => {
+                link.classList.add('linkGradientHover');
+            }, 200);
+        });
 
-    // On mouse leave, clear timeout and remove the linkGradientHover class
-    link.addEventListener('mouseleave', () => {
-        clearTimeout(hoverTimeout);
-        link.classList.remove('linkGradientHover');
+        // On mouse leave, clear timeout and remove the linkGradientHover class
+        link.addEventListener('mouseleave', () => {
+            clearTimeout(hoverTimeout);
+            link.classList.remove('linkGradientHover');
+        });
     });
-});
 
 
 </script>
