@@ -25,7 +25,7 @@
 <body>
 
     <section id="showNotic"  style="opacity: 0;display: none;"
-        class="fixed   duration-500 fadeIn md:max-w-[19rem] md:rounded-xl  p-4 mx-auto z-30  glass md:right-12   md:bottom-16 w-full ">
+        class="fixed   duration-500 fadeIn max-w-[19rem] rounded-xl  p-4 mx-auto z-30  glass left-0 right-0 top-5 w-full ">
         <h2 class="font-semibold text-white ">Kandiedel Notice</h2>
 
         <p class="mt-4 text-sm text-white ">Not avaiable yet; it will be uploaded soon.</p>
@@ -113,7 +113,7 @@
                                 <div class="relative flex md:w-auto w-full items-center justify-center transition-all "
                                     id="changePosition">
                                     <label for="nanme" id="changePara"
-                                        class="absolute cursor-text transition-all md:top-4 top-5 md:left-24 left-32 bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        class="absolute cursor-text transition-all md:top-[18px] top-[19.8px] md:left-[97px] left-32 bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
                                         Name</label>
                                     <input type="text" id="nanme"
                                         class="bg-[#1E1E1E] text-white md:w-auto w-full font-bold py-6 text-center px-6 rounded-3xl ">
@@ -121,7 +121,7 @@
                                 <div class="relative  flex items-center justify-center transition-all md:w-auto w-full "
                                     id="changePosition2">
                                     <label for="email" id="changePara2"
-                                        class="absolute cursor-text transition-all md:top-4 top-5 md:left-24 left-32 bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                        class="absolute cursor-text transition-all md:top-[18px] top-[20.5px] md:left-[94px] left-32 bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
                                         Email</label>
                                     <input type="email" id="email"
                                         class="bg-[#1E1E1E] md:w-auto w-full text-white font-bold py-6 text-center px-6 rounded-3xl ">
@@ -131,7 +131,7 @@
                             <div class="relative flex items-center mt-7 justify-center transition-all w-full "
                                 id="changePosition3">
                                 <label id="changePara3" for="textArea"
-                                    class="absolute cursor-text transition-all top-24 md:left-[13.6rem] left-32  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
+                                    class="absolute cursor-text transition-all top-[100px] md:left-[13.6rem] left-[113px]  bg-gradient-to-r from-[#BB86FC]  select-none to-[#FF80AB] inline-block text-transparent bg-clip-text font-black md:text-[24px] text-[20px]">
                                     Message</label>
                                 <textarea rows="8" id="textArea"
                                     class="bg-[#1E1E1E] resize-none text-white font-bold py-6 text-center px-6 w-full rounded-3xl "></textarea>
@@ -254,7 +254,7 @@
     });
     inputMessage.addEventListener('blur', () => {
         if (inputMessage.value === "") {
-            changePara3.style.top = "5.5rem";
+            changePara3.style.top = "100px";
             changePara3.style.left = "50%";
             changePara3.style.transform = "translateX(-50%)";  // center it again
         }
